@@ -16,6 +16,7 @@ namespace testUnCptBq
             //Auditer
             Assert.IsNotNull(compteType, "La classe Compte n'existe pas.");
         }
+
         [TestMethod]
         public void ConstructeurCompteExiste()
         {
