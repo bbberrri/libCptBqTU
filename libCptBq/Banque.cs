@@ -33,8 +33,26 @@ namespace libCptBq
         }
 
         public override string ToString()
-        {   
-            return "Liste des comptes: WOW!";
+        {
+            string str = "Liste des comptes :\n";
+            foreach (Compte compte in mesComptes)
+            {
+                str += compte.ToString() + "\n";
+            }
+            return str;
+        }
+        
+        public Compte RendCompte(int numero)
+        {
+            //Boucle parcourant la liste des comptes et comparant le numéro de chaque compte avec le numéro fourni en paramètre.
+            foreach (Compte compte in mesComptes)
+            {
+                if (compte.Numero == numero)
+                {
+                    return compte;
+                }
+            }
+            return null;
         }
     }
 }

@@ -1,13 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using libCptBq;
 
-namespace consCptBq
+internal class Program
 {
-    class Program
+    private static void Main(string[] args)
     {
+        Banque b = new Banque();
+        Compte c1 = new Compte(12345, "toto", 1000, -500);
+        Compte c2 = new Compte(12654, "tintin", 5000, -500);
         
+        b.AjouterCompte(c1);
+        b.AjouterCompte(c2);
+        Console.WriteLine(b);
+        Console.WriteLine(b.RendCompte(324));
+        Console.WriteLine(b.RendCompte(12345));
     }
 }
